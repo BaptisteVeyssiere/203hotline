@@ -5,12 +5,13 @@
 // Login   <scutar_n@epitech.net>
 //
 // Started on  Mon Feb 27 17:24:40 2017 Nathan Scutari
-// Last update Mon Mar 13 17:19:29 2017 Nathan Scutari
+// Last update Mon Mar 13 18:14:14 2017 Baptiste Veyssiere
 //
 
 #include <iostream>
 
-void	calc(const int, const int);
+int	proba(double, double);
+int	calc(int);
 
 int	write_help(void)
 {
@@ -57,14 +58,14 @@ int	main(int ac, char **av)
 	return (write_help());
       if ((nbr1 = getnbr(av[1], 1)) == -1)
 	return (84);
-      return (/*calc(nbr1, nbr2, 1)*/);
+      return (calc(nbr1));
     }
   else if (ac == 3)
     {
       if ((nbr1 = getnbr(av[1], 1)) == -1 ||
 	  (nbr2 = getnbr(av[2], 2)) == -1)
 	return (84);
-      return (/*calc(nbr1, nbr2, 2)*/);
+      return (proba(nbr1, nbr2));
     }
   else
     return (write_err("Invalid number of arguments\nType ./203hotline -h for help"));
