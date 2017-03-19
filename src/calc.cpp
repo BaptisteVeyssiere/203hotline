@@ -5,7 +5,7 @@
 // Login   <veyssi_b@epitech.net>
 //
 // Started on  Mon Mar 13 16:24:31 2017 Baptiste Veyssiere
-// Last update Mon Mar 13 18:29:37 2017 Baptiste Veyssiere
+// Last update Sun Mar 19 22:16:13 2017 Baptiste Veyssiere
 //
 
 #include <iostream>
@@ -41,7 +41,7 @@ int	calc(int d)
   for (int n = 1; n < 51; n++)
     Pn[n] = Pn[n - 1] * (p + 1.0 - (double)n) / (double)n * x / (1 - x);
   gettimeofday(&stop, NULL);
-  std::cout << "0->" << std::fixed << std::setprecision(3) << Pn[0] << '\t';
+  std::cout << "0 -> " << std::fixed << std::setprecision(3) << Pn[0] << '\t';
   for (int n = 1; n < 51; n++)
     {
       c = '\t';
@@ -49,7 +49,7 @@ int	calc(int d)
 	c = '\n';
       if (n > 25)
 	overload += Pn[n];
-      std::cout << n << "->" << std::fixed << std::setprecision(3) << Pn[n] << c;
+      std::cout << n << " -> " << std::fixed << std::setprecision(3) << Pn[n] << c;
     }
   overload *= 100;
   std::cout << "overload: " << std::fixed << std::setprecision(1) << overload << "%" << std::endl;
@@ -62,7 +62,7 @@ int	calc(int d)
     Pn[n] = Pn[n - 1] * lambda / (double)n;
   gettimeofday(&stop, NULL);
   std::cout << "Poisson distribution:" << std::endl;
-  std::cout << "0->" << std::fixed << std::setprecision(3) << Pn[0] << '\t';
+  std::cout << "0 -> " << std::fixed << std::setprecision(3) << Pn[0] << '\t';
   overload = 0.0;
   for (int n = 1; n <= 50; n++)
     {
@@ -71,7 +71,7 @@ int	calc(int d)
 	c = '\n';
       if (n > 25)
 	overload += Pn[n];
-      std::cout << n << "->" << std::fixed << std::setprecision(3) << Pn[n] << c;
+      std::cout << n << " -> " << std::fixed << std::setprecision(3) << Pn[n] << c;
     }
   overload *= 100;
   std::cout << "overload: " << std::fixed << std::setprecision(1) << overload << "%" << std::endl;
