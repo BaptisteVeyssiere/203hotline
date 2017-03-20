@@ -5,7 +5,7 @@
 // Login   <veyssi_b@epitech.net>
 //
 // Started on  Mon Mar 13 16:24:31 2017 Baptiste Veyssiere
-// Last update Sun Mar 19 22:16:13 2017 Baptiste Veyssiere
+// Last update Mon Mar 20 15:09:36 2017 Baptiste Veyssiere
 //
 
 #include <iostream>
@@ -20,7 +20,7 @@ int	proba(double n, double k)
   std::cout << k << "-combinaison of a 100 set:" << std::endl;
   Cin = 1;
   for (int i = 0; i < k; i++)
-    Cin *= (n - (double)i) / ((double)i + 1.0);
+    Cin = (long double)Cin * ((long double)n - (long double)i) / ((long double)i + 1.0);
   std::cout << std::fixed << std::setprecision(0) << Cin << std::endl;
 }
 
