@@ -5,7 +5,7 @@
 // Login   <scutar_n@epitech.net>
 //
 // Started on  Mon Feb 27 17:24:40 2017 Nathan Scutari
-// Last update Mon Mar 13 18:14:14 2017 Baptiste Veyssiere
+// Last update Wed Mar 22 12:02:05 2017 Nathan Scutari
 //
 
 #include <iostream>
@@ -51,9 +51,9 @@ int	main(int ac, char **av)
   int		nbr1;
   int		nbr2;
 
-  arg = av[1];
   if (ac == 2)
     {
+      arg = av[1];
       if (arg == "-h")
 	return (write_help());
       if ((nbr1 = getnbr(av[1], 1)) == -1)
