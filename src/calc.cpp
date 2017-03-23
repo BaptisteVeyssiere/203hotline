@@ -5,7 +5,7 @@
 // Login   <veyssi_b@epitech.net>
 //
 // Started on  Mon Mar 13 16:24:31 2017 Baptiste Veyssiere
-// Last update Thu Mar 23 14:41:25 2017 Baptiste Veyssiere
+// Last update Thu Mar 23 15:02:09 2017 Baptiste Veyssiere
 //
 
 #include <iostream>
@@ -50,10 +50,11 @@ int	calc(int d)
       c = '\t';
       if ((n + 1) % 6 == 0 || n == 50)
 	c = '\n';
-      if (n > 25)
+      if (n <= 25)
 	overload += Pn[n];
       std::cout << n << " -> " << std::fixed << std::setprecision(3) << Pn[n] << c;
     }
+  overload = 1 - overload;
   overload *= 100;
   std::cout << "overload: " << std::fixed << std::setprecision(1) << overload << "%" << std::endl;
   std::cout << "computation time: " << stop.tv_usec - start.tv_usec << " ms" << std::endl;
@@ -72,10 +73,11 @@ int	calc(int d)
       c = '\t';
       if ((n + 1) % 6 == 0 || n == 50)
 	c = '\n';
-      if (n > 25)
+      if (n <= 25)
 	overload += Pn[n];
       std::cout << n << " -> " << std::fixed << std::setprecision(3) << Pn[n] << c;
     }
+  overload = 1.0 - overload;
   overload *= 100;
   std::cout << "overload: " << std::fixed << std::setprecision(1) << overload << "%" << std::endl;
   std::cout << "computation time: " << stop.tv_usec - start.tv_usec << " ms" << std::endl;
