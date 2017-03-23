@@ -5,7 +5,7 @@
 // Login   <veyssi_b@epitech.net>
 //
 // Started on  Mon Mar 13 16:24:31 2017 Baptiste Veyssiere
-// Last update Thu Mar 23 14:20:45 2017 Baptiste Veyssiere
+// Last update Thu Mar 23 14:24:57 2017 Baptiste Veyssiere
 //
 
 #include <iostream>
@@ -38,7 +38,7 @@ int	calc(int d)
   std::cout << "Binomial distribution:" << std::endl;
   overload = 0.0;
   gettimeofday(&start, NULL);
-  Pn[0] = (long double)pow((1.0 - (long double)x), (long double)p);
+  Pn[0] = powl((long double)(1.0 - (long double)x), (long double)p);
   for (int n = 1; n < 51; n++)
     Pn[n] = Pn[n - 1] * (p + 1.0 - (long double)n) / (long double)n * x / (1.0 - x);
   gettimeofday(&stop, NULL);
