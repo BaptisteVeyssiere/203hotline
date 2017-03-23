@@ -5,12 +5,12 @@
 // Login   <scutar_n@epitech.net>
 //
 // Started on  Mon Feb 27 17:24:40 2017 Nathan Scutari
-// Last update Wed Mar 22 12:02:05 2017 Nathan Scutari
+// Last update Thu Mar 23 15:20:44 2017 Baptiste Veyssiere
 //
 
 #include <iostream>
 
-int	proba(double, double);
+int	proba(long double, long double);
 int	calc(int);
 
 int	write_help(void)
