@@ -5,7 +5,7 @@
 // Login   <veyssi_b@epitech.net>
 //
 // Started on  Mon Mar 13 16:24:31 2017 Baptiste Veyssiere
-// Last update Thu Mar 23 14:24:57 2017 Baptiste Veyssiere
+// Last update Thu Mar 23 14:41:25 2017 Baptiste Veyssiere
 //
 
 #include <iostream>
@@ -17,6 +17,8 @@ int	proba(double n, double k)
 {
   long double	Cin;
 
+  if (n < k)
+    return (84);
   std::cout << k << "-combinaison of a 100 set:" << std::endl;
   Cin = 1;
   for (int i = 0; i < k; i++)
