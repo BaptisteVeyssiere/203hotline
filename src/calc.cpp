@@ -5,7 +5,7 @@
 // Login   <veyssi_b@epitech.net>
 //
 // Started on  Mon Mar 13 16:24:31 2017 Baptiste Veyssiere
-// Last update Mon Mar 20 15:09:36 2017 Baptiste Veyssiere
+// Last update Thu Mar 23 14:20:45 2017 Baptiste Veyssiere
 //
 
 #include <iostream>
@@ -22,24 +22,25 @@ int	proba(double n, double k)
   for (int i = 0; i < k; i++)
     Cin = (long double)Cin * ((long double)n - (long double)i) / ((long double)i + 1.0);
   std::cout << std::fixed << std::setprecision(0) << Cin << std::endl;
+  return (0);
 }
 
 int	calc(int d)
 {
   struct timeval stop, start;
-  double	p = 3500.0;
-  double	x = (double)d / 8.0 / 3600.0;
+  long double	p = 3500.0;
+  long double	x = (double)d / 8.0 / 3600.0;
   char		c;
-  double	overload;
-  double	lambda = (x * 3500.0);
-  double	Pn[51];
+  long double	overload;
+  long double	lambda = (x * 3500.0);
+  long double	Pn[51];
 
   std::cout << "Binomial distribution:" << std::endl;
   overload = 0.0;
   gettimeofday(&start, NULL);
-  Pn[0] = (double)pow((1 - x), p);
+  Pn[0] = (long double)pow((1.0 - (long double)x), (long double)p);
   for (int n = 1; n < 51; n++)
-    Pn[n] = Pn[n - 1] * (p + 1.0 - (double)n) / (double)n * x / (1 - x);
+    Pn[n] = Pn[n - 1] * (p + 1.0 - (long double)n) / (long double)n * x / (1.0 - x);
   gettimeofday(&stop, NULL);
   std::cout << "0 -> " << std::fixed << std::setprecision(3) << Pn[0] << '\t';
   for (int n = 1; n < 51; n++)
@@ -59,7 +60,7 @@ int	calc(int d)
   gettimeofday(&start, NULL);
   Pn[0] = exp(-lambda);
   for (int n = 1; n <= 50; n++)
-    Pn[n] = Pn[n - 1] * lambda / (double)n;
+    Pn[n] = Pn[n - 1] * lambda / (long double)n;
   gettimeofday(&stop, NULL);
   std::cout << "Poisson distribution:" << std::endl;
   std::cout << "0 -> " << std::fixed << std::setprecision(3) << Pn[0] << '\t';
